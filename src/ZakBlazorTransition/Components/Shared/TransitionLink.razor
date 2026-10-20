@@ -1,0 +1,20 @@
+@* A link that plays its transition when it's followed, and starts loading it on hover. *@
+@namespace ZakBlazorTransition.Components
+<a href="@Href" data-transition="@Transition">@ChildContent</a>
+
+@code {
+    /// <summary>Where the link goes.</summary>
+    [Parameter, EditorRequired]
+    public string Href { get; set; } = "/";
+
+    /// <summary>
+    /// The transition to play, as <c>data-transition</c>. Null leaves the engine's
+    /// default. The transition starts downloading when the link is hovered or focused.
+    /// </summary>
+    [Parameter]
+    public string? Transition { get; set; }
+
+    /// <summary>The link's content.</summary>
+    [Parameter, EditorRequired]
+    public RenderFragment ChildContent { get; set; } = default!;
+}

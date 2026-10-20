@@ -1,0 +1,206 @@
+/*
+ * The transition layer, and the styles the library's own components share.
+ * Sites can restyle everything through the custom properties below.
+ */
+
+:root {
+  --zakbt-color: #111111;
+  --zakbt-color-1: #111111;
+  --zakbt-color-2: #f4f1ea;
+  --zakbt-fade: #111111;
+  --zakbt-z: 1000;
+  --zakbt-font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+/* The persistent layer above the page. It owns nothing while a page is idle. */
+[data-zakbt] {
+  position: fixed;
+  inset: 0;
+  z-index: var(--zakbt-z);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* While a transition runs, the layer also blocks clicks on the page below. */
+[data-zakbt]:is([data-state="leaving"], [data-state="entering"], [data-state="covered"]) {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/*
+ * Covered: painted solid, unless the transition hides the page its own way
+ * (`solidCover: false`). In `:where()`, which adds no weight to the selector,
+ * so a site's CSS can paint it another colour.
+ */
+[data-zakbt]:where([data-state="covered"][data-cover="solid"]) {
+  background: var(--zakbt-color);
+}
+
+/* If scripts never start (blocked or broken), uncover the first page anyway. */
+[data-zakbt]:not([data-ready])[data-state="covered"] {
+  animation: zakbt-failsafe 0s 3s forwards;
+}
+
+@keyframes zakbt-failsafe {
+  to {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (scripting: none) {
+  [data-zakbt] {
+    display: none;
+  }
+}
+
+/* A full-screen filled layer, created by transitions with `panel()`. */
+.zakbt-panel {
+  position: absolute;
+  inset: 0;
+  background: var(--zakbt-color);
+  will-change: transform, clip-path, opacity;
+}
+
+/* ------------------------------------------------------------------ index */
+
+.zakbt-index {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.zakbt-index__group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.zakbt-index__label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--zakbt-muted, #6b6b6b);
+}
+
+.zakbt-index__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zakbt-index__link {
+  display: block;
+  padding: 0.35rem 0;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.zakbt-index__link:hover,
+.zakbt-index__link:focus-visible {
+  border-bottom-color: currentColor;
+}
+
+/* ---------------------------------------------------------------- preview */
+
+.zakbt-preview {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.zakbt-preview__head {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.zakbt-preview__kicker {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--zakbt-muted, #6b6b6b);
+}
+
+.zakbt-preview__kicker span {
+  margin-left: 0.4em;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.zakbt-preview__title {
+  margin: 0;
+  font-size: clamp(3rem, 1.5rem + 7vw, 7rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
+}
+
+.zakbt-preview__summary {
+  max-width: 42rem;
+}
+
+.zakbt-preview__pager {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--zakbt-line, #e4e1da);
+}
+
+.zakbt-preview__pager a {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+  color: inherit;
+  text-decoration: none;
+}
+
+.zakbt-preview__pager .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--zakbt-muted, #6b6b6b);
+}
+
+.zakbt-preview__name {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+}
+
+.zakbt-preview__number {
+  flex: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--zakbt-muted, #6b6b6b);
+}
+
+.zakbt-preview__pager a:hover .zakbt-preview__name,
+.zakbt-preview__pager a:focus-visible .zakbt-preview__name {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
+.zakbt-preview > * + .zakbt-preview__facts {
+  margin-top: 1rem;
+}

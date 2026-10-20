@@ -1,0 +1,24 @@
+@page "/not-found"
+@inject IJSRuntime JS
+
+<PageTitle>Lost between pages — ZakBlazorTransition</PageTitle>
+
+<section class="lost" data-entrance="">
+    <p class="lost__kicker">404</p>
+    <h1 class="lost__title">Lost between pages.</h1>
+    <p class="lost__note">
+        This route never got a transition. The index keeps all twenty-one —
+        pick one and watch it move.
+    </p>
+    <a class="lost__link" href="/" data-transition="curtain">Back to the index</a>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("zakbtDemo.setGround", Grounds.Grey);
+        }
+    }
+}

@@ -1,0 +1,742 @@
+/* ZakBlazorTransition demo — editorial look: large type,
+   generous whitespace, three grounds (white / grey / night). Grounds are keyed to
+   [data-ground] so they style the live <body> and the old-page copies the transition
+   layer makes (copyPage carries body's data-* attributes onto the copy). */
+
+:root {
+    --primary: #ff4d1c;
+    --paper: #f6f3ec;
+    --ink: #17161a;
+    --muted: #6f6b64;
+    --line: #d8d3c8;
+    --grey-ground: #d9d4c9;
+    --night-ground: #101014;
+    --night-ink: #efece5;
+
+    /* The colour transitions read from the page (helpers' pageColor / cssColor). */
+    --zakbt-color: var(--ink);
+    --zakbt-color-1: var(--ink);
+    --zakbt-color-2: var(--paper);
+    --color-accent: var(--primary);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+[data-ground] {
+    --ground: var(--paper);
+    --on-ground: var(--ink);
+    --zakbt-color: var(--on-ground);
+    --zakbt-color-1: var(--on-ground);
+    --zakbt-color-2: var(--ground);
+    background-color: var(--ground);
+    color: var(--on-ground);
+}
+
+body[data-ground="grey"],
+[data-ground="grey"] {
+    --ground: var(--grey-ground);
+}
+
+body[data-ground="night"],
+[data-ground="night"] {
+    --ground: var(--night-ground);
+    --on-ground: var(--night-ink);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ---------- frame: header, main, footer ---------- */
+.text-primary {
+    color: var(--primary);
+}
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.1rem clamp(1.25rem, 4vw, 3.5rem);
+    background: var(--ground);
+    border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 18%, transparent);
+}
+
+.header__name {
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+.header__brand { 
+    display: flex;
+    text-decoration: none; 
+    gap: 0.5rem;
+    outline: none;
+}
+.header__brand:hover .header__logo{
+    transform: scale(1.1) rotate(5deg);
+}
+.header__logo{
+    width: 2.5em;
+    height: 2.5em;
+    padding: .5rem;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+        transition: all 360ms cubic-bezier(0.2, 0, 0, 1);
+} 
+.header__logo svg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.header__brandtext{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+.text-muted-foreground{
+    color: var(--muted);
+}
+.header__nav {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+.header__nav a {
+    text-decoration: none;
+    color: color-mix(in srgb, var(--on-ground) 62%, var(--ground));
+    display: flex;
+    gap: 0.15rem;
+}
+.header__nav a svg{
+    width: 1.2em;
+    height: 1.2em;
+    color: color-mix(in srgb, var(--on-ground) 62%, var(--ground));
+}
+.header__nav a:hover,
+.header__nav a:focus-visible,
+.header__nav a:hover svg,
+.header__nav a:focus-visible svg {
+    color: var(--primary);
+}
+main.page {
+    flex: 1;
+    padding: clamp(1.5rem, 4vw, 4rem) clamp(1.25rem, 4vw, 3.5rem) 4rem;
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+}
+
+    main.page:focus {
+        outline: none;
+    }
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem clamp(1.25rem, 4vw, 3.5rem);
+    border-top: 1px solid color-mix(in srgb, var(--on-ground) 18%, transparent);
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: color-mix(in srgb, var(--on-ground) 55%, var(--ground));
+}
+
+    .site-footer a {
+        text-decoration-color: var(--primary);
+        text-underline-offset: 0.2em;
+    }
+
+/* ---------- home: hero ---------- */
+
+.hero {
+    margin: clamp(1rem, 6vh, 4rem) 0 clamp(2.5rem, 8vh, 5rem);
+}
+
+.hero__title {
+    font-size: clamp(2.8rem, 1.6rem + 6vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    margin: 0 0 1.5rem;
+}
+
+    .hero__title em {
+        color: var(--primary);
+    }
+
+.hero__note {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--on-ground) 72%, var(--ground));
+    max-width: 38rem;
+    margin: 0;
+}
+
+/* ---------- home: the index of transitions ---------- */
+
+.zakbt-index__group {
+    margin-bottom: 3rem;
+}
+
+.zakbt-index__label {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: color-mix(in srgb, var(--on-ground) 55%, var(--ground));
+    margin: 0 0 0.5rem;
+}
+
+.zakbt-index__list {
+    display: block; /* the library's default lays names in columns; rows suit the editorial index */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zakbt-index__item {
+    border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 14%, var(--ground));
+}
+
+.zakbt-index__link {
+    display: grid;
+    grid-template-columns: 3.2rem minmax(9rem, auto) 1fr;
+    align-items: baseline;
+    gap: 0.5rem 1.5rem;
+    padding: 1rem 0.25rem;
+    border: 0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.zakbt-index__name {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.8rem;
+    color: color-mix(in srgb, var(--on-ground) 45%, var(--ground));
+}
+
+.zakbt-index__link-name {
+    font-size: clamp(1.6rem, 1rem + 2.4vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.zakbt-index__caption {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--on-ground) 60%, var(--ground));
+    justify-self: end;
+    text-align: right;
+    max-width: 24rem;
+}
+
+.zakbt-index__link:hover,
+.zakbt-index__link:focus-visible {
+    color: var(--primary);
+}
+
+    .zakbt-index__link:hover .zakbt-index__caption,
+    .zakbt-index__link:focus-visible .zakbt-index__caption {
+        color: var(--primary);
+    }
+
+/* ---------- home: closing note ---------- */
+
+.home-about {
+    margin-top: 4rem;
+    max-width: 42rem;
+}
+
+.home-about h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.75rem;
+}
+
+.home-about p {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--on-ground) 78%, var(--ground));
+    margin: 0 0 1rem;
+}
+
+    .home-about code {
+        font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+        font-size: 0.85em;
+        background: color-mix(in srgb, var(--on-ground) 8%, var(--ground));
+        padding: 0.1em 0.4em;
+    }
+
+.home-about__meta {
+    font-size: 0.85rem;
+}
+
+/* ---------- transition detail pages ---------- */
+
+.detail-head {
+    margin: clamp(1rem, 5vh, 3rem) 0 2.5rem;
+}
+
+.detail-group {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: color-mix(in srgb, var(--on-ground) 55%, var(--ground));
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 0.75rem;
+}
+
+.detail-tag {
+    font-size: 0.68rem;
+    padding: 0.15em 0.6em;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+}
+
+.detail-title {
+    font-size: clamp(2.8rem, 1.6rem + 6vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    margin: 0 0 1rem;
+}
+
+.detail-talk {
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+    font-style: italic;
+    color: var(--primary);
+    max-width: 34rem;
+    margin: 0;
+}
+
+.detail-body {
+    max-width: 40rem;
+    margin-bottom: 3rem;
+}
+
+    .detail-body > p {
+        font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.75;
+        color: color-mix(in srgb, var(--on-ground) 80%, var(--ground));
+    }
+
+.detail-card {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: color-mix(in srgb, var(--on-ground) 5%, var(--ground));
+    border-left: 4px solid var(--primary);
+}
+
+    .detail-card h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0 0 0.75rem;
+        color: var(--primary);
+    }
+
+    .detail-card pre {
+        margin: 0 0 0.75rem;
+        overflow-x: auto;
+    }
+
+    .detail-card code {
+        font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+        font-size: 0.9rem;
+    }
+
+.detail-hint {
+    font-size: 0.9rem !important;
+    color: color-mix(in srgb, var(--on-ground) 62%, var(--ground)) !important;
+    margin: 0 !important;
+}
+
+.detail-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid color-mix(in srgb, var(--on-ground) 14%, var(--ground));
+}
+
+.detail-back {
+    font: inherit;
+    font-size: 1.1rem;
+    color: inherit;
+    background: none;
+    border: 1px solid color-mix(in srgb, var(--on-ground) 35%, var(--ground));
+    border-radius: 999px;
+    padding: 0.5em 1.4em;
+    cursor: pointer;
+}
+
+    .detail-back:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+.detail-neighbors {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    color: color-mix(in srgb, var(--on-ground) 50%, var(--ground));
+}
+
+.detail-neighbor {
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
+
+    .detail-neighbor:hover,
+    .detail-neighbor:focus-visible {
+        color: var(--primary);
+    }
+
+/* ---------- 404 ---------- */
+
+.lost {
+    margin: clamp(3rem, 12vh, 8rem) auto;
+    max-width: 34rem;
+    text-align: center;
+}
+
+.lost__kicker {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    color: var(--primary);
+    margin: 0 0 1rem;
+}
+
+.lost__title {
+    font-size: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 1.25rem;
+}
+
+.lost__note {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--on-ground) 70%, var(--ground));
+    margin: 0 0 2rem;
+}
+
+.lost__link {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
+
+/* ---------- get started ---------- */
+
+.gs-body { 
+    width: 100%;
+    max-width: 78rem;
+    margin-bottom: 3rem;
+}
+
+.gs-lead {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--on-ground) 80%, var(--ground));
+}
+
+.gs-num {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.85em;
+    color: var(--primary);
+    margin-right: 0.6em;
+}
+
+.gs-subtitle {
+    font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 2.5rem 0 1rem;
+}
+
+.gs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+    .gs-table th,
+    .gs-table td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.6rem 1rem 0.6rem 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 14%, var(--ground));
+    }
+
+    .gs-table th {
+        font-weight: 500;
+        color: color-mix(in srgb, var(--on-ground) 60%, var(--ground));
+    }
+
+    .gs-table code {
+        font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+        font-size: 0.85em;
+    }
+
+.gs-close {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.75;
+    margin-top: 2rem;
+}
+
+    .gs-close a {
+        text-decoration: underline;
+        text-decoration-color: var(--primary);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.2em;
+    }
+
+    .gs-close a:hover,
+    .gs-close a:focus-visible {
+        color: var(--primary);
+    }
+
+/* ---------- docs ---------- */
+
+.docs-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    margin: 0 0 2.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid color-mix(in srgb, var(--on-ground) 14%, var(--ground));
+    border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 14%, var(--ground));
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+    .docs-toc a,
+    .docs-toc button {
+        text-decoration: none;
+        color: color-mix(in srgb, var(--on-ground) 55%, var(--ground));
+    }
+
+    .docs-toc button {
+        font: inherit;
+        text-transform: inherit;
+        letter-spacing: inherit;
+        background: none;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        .docs-toc a:hover,
+        .docs-toc a:focus-visible,
+        .docs-toc button:hover,
+        .docs-toc button:focus-visible {
+            color: var(--primary);
+        }
+
+/* Anchored section headings clear the sticky header when jumped to. */
+.gs-subtitle[id] {
+    scroll-margin-top: 5rem;
+}
+
+.docs-catalog__label {
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: color-mix(in srgb, var(--on-ground) 55%, var(--ground));
+    margin: 1.75rem 0 0.5rem;
+}
+
+.docs-catalog {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2 20rem;
+    column-gap: 2.5rem;
+}
+
+    .docs-catalog li {
+        break-inside: avoid;
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 12%, var(--ground));
+    }
+
+    .docs-catalog a {
+        font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+        font-size: 0.95rem;
+        text-decoration: none;
+        color: var(--primary);
+        white-space: nowrap;
+    }
+
+        .docs-catalog a:hover,
+        .docs-catalog a:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+        }
+
+    .docs-catalog span {
+        font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: color-mix(in srgb, var(--on-ground) 60%, var(--ground));
+    }
+
+/* ---------- docs: copy-paste code blocks ---------- */
+
+.code-block {
+    margin: 1.25rem 0 1.5rem;
+    background: color-mix(in srgb, var(--on-ground) 6%, var(--ground));
+    border-left: 4px solid var(--primary);
+}
+
+.code-block__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0.5rem 0.4rem 1rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 10%, var(--ground));
+}
+
+.code-block__lang {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: color-mix(in srgb, var(--on-ground) 50%, var(--ground));
+}
+
+.code-block__copy {
+    font: inherit;
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--on-ground) 65%, var(--ground));
+    background: none;
+    border: 1px solid color-mix(in srgb, var(--on-ground) 28%, var(--ground));
+    border-radius: 999px;
+    padding: 0.3em 1em;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+    .code-block__copy:hover,
+    .code-block__copy:focus-visible {
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .code-block__copy.is-copied {
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+
+.code-block pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    white-space: pre;
+    color: var(--on-ground);
+}
+
+/* Screen-reader announcement for the copy action; hidden visually. */
+.code-block__status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 48rem) {
+    .zakbt-index__link {
+        grid-template-columns: 2.6rem 1fr;
+    }
+
+    .zakbt-index__caption {
+        grid-column: 2;
+        justify-self: start;
+        text-align: left;
+    }
+
+    .header__nav {
+        gap: 1rem;
+    }
+}

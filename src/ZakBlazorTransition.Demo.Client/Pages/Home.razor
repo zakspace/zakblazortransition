@@ -1,0 +1,42 @@
+@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>ZakBlazorTransition — page transitions for Blazor</PageTitle>
+
+<section class="hero" data-entrance="">
+    <h1 class="hero__title">Page transitions,<br /><em>played on navigation.</em></h1>
+    <p class="hero__note">
+        Twenty-one effects from the ZakBlazorTransition engine, running inside Blazor's
+        own router — the route changes while the page is still on screen.
+        Every name below is a link that plays itself.
+    </p>
+</section>
+
+<TransitionIndex Caption="@(t => DemoCatalog.Talk(t.Name))" />
+
+<section class="home-about" data-entrance="">
+    <h2>How it plays</h2>
+    <p>
+        A link carries its effect as <code>data-transition="name"</code>. Follow one and
+        the engine copies the current page into a fixed layer, swaps the route underneath
+        the cover, then reveals the new page with the same animation. Press the browser's
+        back button and what you played replays in reverse — <em>traverse</em> is the
+        whole trick, and it's the reason these transitions feel like one continuous surface.
+    </p>
+    <p class="home-about__meta">
+        Overlay: a panel covers the screen. Page composition: the pages themselves move.
+        WebGL: three.js paints the swap on a canvas, falling back to a fade when there's
+        no GPU.
+    </p>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Leave whatever ground the previous page set: the index is paper-white.
+            await JS.InvokeVoidAsync("zakbtDemo.setGround", Grounds.White);
+        }
+    }
+}

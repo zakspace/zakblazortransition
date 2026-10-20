@@ -1,0 +1,123 @@
+@page "/transition/{Name}"
+@inject IJSRuntime JS
+
+<PageTitle>@(Descriptor is null ? "Not found" : Descriptor.Name) — ZakBlazorTransition</PageTitle>
+
+@if (Descriptor is null)
+{
+    <NotFound />
+}
+else
+{
+    <section class="detail-head" data-entrance="">
+        <p class="detail-group">
+            @GroupLabel(Descriptor.Group)
+            @if (Descriptor.UsesWebGl)
+            {
+                <span class="detail-tag">WebGL</span>
+            }
+        </p>
+        <h1 class="detail-title">@Descriptor.Name</h1>
+        <p class="detail-talk">@DemoCatalog.Talk(Descriptor.Name)</p>
+    </section>
+
+    <section class="detail-body" data-entrance="">
+        <p>
+            Click the name in the header, or use your browser's back button, and this
+            page leaves the way it arrived — the same animation, run in reverse.
+            That symmetry is the point: the ZakBlazorTransition engine moves pages, it doesn't
+            replace them.
+        </p>
+        <div class="detail-card">
+            <h2>Try it from any link</h2>
+            <pre><code>&lt;a href="/" data-transition="@Descriptor.Name"&gt;Home&lt;/a&gt;</code></pre>
+            <p class="detail-hint">
+                The engine reads <code>data-transition</code> where the click happens,
+                covers the swap, and remembers it in history — so back and forward
+                replay what you actually watched.
+            </p>
+        </div>
+        <p>
+            Lorem ipsum to give the effect something to move: a wall of type that
+            scrolls, folds, dissolves and reappears. The heavier the page, the more
+            the transition has to work with — old-page copies, clip paths and shader
+            covers all sample this text mid-flight.
+        </p>
+    </section>
+
+    <nav class="detail-controls" aria-label="More transitions" data-entrance="">
+        <button type="button" class="detail-back" @onclick="GoBackAsync">← Back, in reverse</button>
+        <span class="detail-neighbors">
+            @if (Previous is not null)
+            {
+                <a class="detail-neighbor" href="/transition/@Previous.Name" data-transition="@Previous.Name">
+                    @Previous.Name
+                </a>
+            }
+            <span aria-hidden="true">·</span>
+            @if (Next is not null)
+            {
+                <a class="detail-neighbor" href="/transition/@Next.Name" data-transition="@Next.Name">
+                    @Next.Name
+                </a>
+            }
+        </span>
+    </nav>
+}
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = "";
+
+    private TransitionDescriptor? Descriptor => TransitionCatalog.Find(Normalize(Name));
+
+    private TransitionDescriptor? Previous => Neighbor(-1);
+
+    private TransitionDescriptor? Next => Neighbor(+1);
+
+    private string? _appliedGround;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // The ground belongs to the page. Applied after render — safe in every
+        // render mode — and re-applied whenever the route's ground changes while
+        // this component instance stays put.
+        var ground = Descriptor is null ? Grounds.Grey : DemoCatalog.Ground(Descriptor.Name);
+        if (_appliedGround != ground)
+        {
+            _appliedGround = ground;
+            await JS.InvokeVoidAsync("zakbtDemo.setGround", ground);
+        }
+    }
+
+    private static string? Normalize(string name) =>
+        string.IsNullOrWhiteSpace(name) ? null : name.Trim().ToLowerInvariant();
+
+    private static string GroupLabel(TransitionGroup group) => group switch
+    {
+        TransitionGroup.Overlay => "Overlay",
+        TransitionGroup.PageComposition => "Page composition",
+        TransitionGroup.WebGl => "WebGL",
+        _ => group.ToString(),
+    };
+
+    private TransitionDescriptor? Neighbor(int step)
+    {
+        if (Descriptor is null) return null;
+        var all = TransitionCatalog.All;
+        var at = -1;
+        for (var i = 0; i < all.Count; i++)
+        {
+            if (all[i].Name == Descriptor.Name) { at = i; break; }
+        }
+        if (at < 0) return null;
+        var target = (at + step + all.Count) % all.Count;
+        return all[target];
+    }
+
+    private async Task GoBackAsync()
+    {
+        // History, not a link: the traversal replays the arrival in reverse.
+        await JS.InvokeVoidAsync("zakbtDemo.goBack", "/");
+    }
+}

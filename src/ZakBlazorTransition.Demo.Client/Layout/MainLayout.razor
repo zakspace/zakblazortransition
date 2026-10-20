@@ -1,0 +1,36 @@
+@inherits LayoutComponentBase
+
+@* Header classes match the original site's names (.header__name, .header__nav):
+   the carousel transition gathers its strip from exactly these selectors. *@
+<header class="site-header">
+    <a class="header__brand" href="/" data-transition="wipe">
+        <div class="header__logo">
+            <svg width="375" height="366" viewBox="0 0 375 366" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M356.331 17.8266L356.332 17.8278C362.168 23.5264 366.595 30.0992 369.622 37.1226L369.779 37.4874L370.046 38.1248C372.971 45.1584 374.59 52.8358 374.59 60.8666V60.8678C374.59 68.8883 372.976 76.5581 370.055 83.5866L369.754 84.3021L369.633 84.5862C366.605 91.6186 362.175 98.2016 356.332 103.907L106.348 347.977C82.1024 371.649 42.4301 371.649 18.1843 347.977V347.976C-6.06144 324.303 -6.06144 285.571 18.1843 261.898L161.744 121.733H62.7936C28.505 121.733 0.452484 94.345 0.452484 60.8678V60.8666C0.452484 27.3894 28.505 0 62.7936 0H312.249C320.486 0 328.362 1.58464 335.576 4.45056L336.115 4.66688L336.602 4.86528C343.783 7.81952 350.503 12.137 356.331 17.8266Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M312.25 365.696C277.776 365.696 249.909 338.488 249.909 304.829C249.909 271.171 277.776 243.963 312.25 243.963C346.724 243.963 374.591 271.171 374.591 304.829C374.591 338.488 346.724 365.696 312.25 365.696Z" fill="#E4FAF8"></path> </svg>
+        </div>
+        <div class="header__brandtext">
+        <span class="text-primary">Zak</span> 
+        <span class="text-muted-foreground">BlazorTransition</span>
+        </div>
+    </a>
+    <nav class="header__nav" aria-label="Site">
+        <!-- <a href="/" data-transition="wipe">Index</a> -->
+        <a href="/docs" data-transition="wipe">Installation</a>
+        <a href="https://github.com/zakspace/zakblazortransition" data-transition="wipe"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Github</a>
+    
+    </nav>
+</header>
+
+<main tabindex="-1" class="page">
+    @Body
+</main>
+
+<footer class="site-footer">
+    <span>ZakBlazorTransition — a page-transition engine for Blazor, playing during real route navigation.</span>
+    <a href="https://blazor.net" target="_blank" rel="noopener">Built with Blazor</a>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

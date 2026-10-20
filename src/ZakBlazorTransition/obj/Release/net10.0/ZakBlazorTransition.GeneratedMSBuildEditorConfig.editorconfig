@@ -1,0 +1,44 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = ZakBlazorTransition
+build_property.RootNamespace = ZakBlazorTransition
+build_property.ProjectDir = D:\Source\Experiment\BlazorTransition\src\ZakBlazorTransition\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Source\Experiment\BlazorTransition\src\ZakBlazorTransition
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Source/Experiment/BlazorTransition/src/ZakBlazorTransition/Components/Shared/TransitionHost.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVHJhbnNpdGlvbkhvc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Source/Experiment/BlazorTransition/src/ZakBlazorTransition/Components/Shared/TransitionIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVHJhbnNpdGlvbkluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Source/Experiment/BlazorTransition/src/ZakBlazorTransition/Components/Shared/TransitionLink.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVHJhbnNpdGlvbkxpbmsucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Source/Experiment/BlazorTransition/src/ZakBlazorTransition/Components/Shared/TransitionPreview.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcVHJhbnNpdGlvblByZXZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Source/Experiment/BlazorTransition/src/ZakBlazorTransition/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 

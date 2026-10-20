@@ -1,0 +1,824 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\zakbt.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>css/zakbt.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kto9objtaw</Fingerprint>
+      <Integrity>6Hk40eA7J+sqGC3az+4iMQGi5NQA1ONsKYqv+mNIzms=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4440</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\zakbt.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\CSSPlugin.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/gsap/CSSPlugin.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vgm8gv6fci</Fingerprint>
+      <Integrity>QdBh6LCi3f22R/j4XaaQ7G0ZGUQDAhrMpwiJJhBf5r0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>65156</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:53 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\CSSPlugin.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\gsap-core.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/gsap/gsap-core.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>z45yitpcp8</Fingerprint>
+      <Integrity>g8S2wLAgvrpze5CJYYFWC3Z0c0Kw97qluhsYWnX2W2U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>171676</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\gsap-core.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\index.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/gsap/index.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>z57z1403k3</Fingerprint>
+      <Integrity>BwA4I1unXsIYbQVOvYOulObeapcfXT89bNEDdVH5T6o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>664</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\index.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\SplitText.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/gsap/SplitText.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>81axfu9s5w</Fingerprint>
+      <Integrity>DOgiShHrlZ1DTdAvQ1TdffV6KDIX0tIOx2GSwl/5q4k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>17263</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\SplitText.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.core.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/three.core.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ew53hbi38x</Fingerprint>
+      <Integrity>nt3gArBmqaBWdqYSf2dzW2K685m96lKfL34xZX2naeY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1458113</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.core.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.module.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/three.module.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o2pak704cp</Fingerprint>
+      <Integrity>kFIELWdssP3B3f7+GTBT80t6wFE6YW/axFNdSZh4Euo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>662772</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.module.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.tsl.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/three.tsl.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fujksdrx0k</Fingerprint>
+      <Integrity>d4HDHMGBmyNP0Z3ZllGhh4qg6rTo1hPo9WEqW/hsRyY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>36859</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:30:51 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.tsl.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.webgpu.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/vendor/three.webgpu.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l4jxs5mfv5</Fingerprint>
+      <Integrity>Fc/OXGU1QXBP2aNGPDnT6LhUu2JlzNhU18/nQJBiXMY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>2284850</FileLength>
+      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.webgpu.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\config.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/config.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tyyqquorpz</Fingerprint>
+      <Integrity>hQXsvRaKdGZmpYsDqEZ7g/HBjcGK/Eubo/kNPpTnSnA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>453</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\config.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\index.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/index.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a7jb1aqw6s</Fingerprint>
+      <Integrity>CiHOUGv3Ul3zAZZa15wlBZKENxJrLu0HcgcQyt7R3Sc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>22485</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:25 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\index.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entrance.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/entrance.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p7r2k24w0u</Fingerprint>
+      <Integrity>RRKU0L5zgCZfhHPFiewNS5imXakz/K6gPc8WyI160fs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>5607</FileLength>
+      <LastWriteTime>Fri, 16 Oct 2026 11:01:32 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entrance.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entry-memory.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/entry-memory.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8r47a5nhrh</Fingerprint>
+      <Integrity>LL4p9GKVy4+BoVGnKMV0J0SKeLMzSxHsUydcsZyZblI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1968</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entry-memory.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\helpers.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/helpers.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hop1r6k23o</Fingerprint>
+      <Integrity>QcsRuyEyDzJaJTlbYYPGFFTXrqnWFTOfInuYq6cRFek=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>2336</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\helpers.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\media.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/media.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>g945amrdd1</Fingerprint>
+      <Integrity>LAlBdXNeHBqQH+tSfPlsk8lWg90taahXx90SWkgTxd4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1621</FileLength>
+      <LastWriteTime>Fri, 16 Oct 2026 11:00:46 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\media.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\meta.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/meta.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o8fr55lprn</Fingerprint>
+      <Integrity>6G6ABiipDiUvFgzbnQjOn4utezmQkY3xjC1NUSkjn6I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>333</FileLength>
+      <LastWriteTime>Fri, 16 Oct 2026 11:01:55 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\meta.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\old-page.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/old-page.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>843zb64p3n</Fingerprint>
+      <Integrity>eMLtB4dVPuGSFvQ7hMtTrWhb3Ny6hlNqdIrIt0m9O+s=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>8015</FileLength>
+      <LastWriteTime>Fri, 16 Oct 2026 11:01:06 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\old-page.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\registry.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/registry.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yzh66sol18</Fingerprint>
+      <Integrity>YunBtTsWt6TldahWPoR6duBJuda/J2S4ZSLE9NGM2jE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>3399</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\registry.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\webgl.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/lib/webgl.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>igxkbb8nhb</Fingerprint>
+      <Integrity>nuJ07NkPiGWbXOa5WyfPubrEag+9IZTGeyk3C9gOggM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>8776</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:25 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\webgl.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\carousel.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/carousel.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xvq8ob2oxa</Fingerprint>
+      <Integrity>44GQnItIztubeWnOb1uO/Yw5ykBplBEMmE+UlABqGVA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>7249</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\carousel.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\channel.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/channel.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wizz4h207o</Fingerprint>
+      <Integrity>aNmFXieEpP3Gmjj72VX6nkDGamPOKyD8dOi4nYHOm9s=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>6661</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\channel.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\circle.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/circle.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>njdg0y19dc</Fingerprint>
+      <Integrity>bT8uNUcHs/ynWUuM7IQwyQQwm83uJ+lWwpAEBlG0fYI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1701</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\circle.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\columns.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/columns.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hjjcxv0zvd</Fingerprint>
+      <Integrity>E7V5wh3imKfOIUypSmZcE14ttT2dJ8/Dvg3kem9eV3M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1799</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\columns.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\corner.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/corner.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0xu35z4b2m</Fingerprint>
+      <Integrity>vK8FMP1jnj3cxnqcpXsf6D36AvcPqkRUGD8uEd8i5sY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4865</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\corner.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\cube.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/cube.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kyjm680k6n</Fingerprint>
+      <Integrity>jPTNDPqzvndw2DUgM0IOJ5V7VYdO09VURWtcFzV6FKY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>5538</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\cube.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\curtain.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/curtain.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cruzcigye6</Fingerprint>
+      <Integrity>eBo43kVT9qFn+P2/GQKi3xfw+gbs2bukN17eI/8bz54=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1968</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\curtain.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dissolve.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/dissolve.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i16y347nig</Fingerprint>
+      <Integrity>FvbC7s/D/8UVb1mEVo0YzNabVOUAg6njGfx6QGfkqpU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>2644</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dissolve.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dither.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/dither.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gkvsf3u12d</Fingerprint>
+      <Integrity>MPai/hMEwoeuWcn0LUlmpSm6F4ptcwneaIhmSSHnOWQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4009</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dither.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\fade.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/fade.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>iyaplr1r21</Fingerprint>
+      <Integrity>RqseRmpT8ouwr2i1cdGlBLHMuTaGutqxaCG3Cry8Jz0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>707</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\fade.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\frame.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/frame.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ljpf6yutc6</Fingerprint>
+      <Integrity>Ed0D7WiF+ekzfPVTtZi6t2qApfHRuVCBXGuMU6Gx1E4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4187</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\frame.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\ink.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/ink.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ym6vfukfso</Fingerprint>
+      <Integrity>WtqEgFhkG24ju4dECMoeBznYy3CmVcQF2V8GlgfKPvM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>2648</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\ink.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\particles.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/particles.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uqxjiaq45g</Fingerprint>
+      <Integrity>anTkupFtUoHZRj65om0Ods3WeNHGxlAEB43tos5wUOc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>9496</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\particles.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\peel.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/peel.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lsbwk7ucd5</Fingerprint>
+      <Integrity>tfOhFYKr1bdx9jaYVuzmB3C6NNth+wAMgVkMS+qJMLE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>6514</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\peel.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slices.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/slices.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wu79jpd4ri</Fingerprint>
+      <Integrity>+Kj4+oTyazT0ChxtLzNEKKXYeXOIPgnrxzf/Ca7mwj4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4911</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slices.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slide-over.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/slide-over.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>mxacsqgitz</Fingerprint>
+      <Integrity>pnlaoLAhCI2YFAic86GRDVRqcY2B2y+gh2jyg24JsCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4119</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slide-over.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\spiral.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/spiral.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qixjmmmqup</Fingerprint>
+      <Integrity>cv7bGGeRPN4r+TYdoUaWhAO0+6k0C5QueSTYX1LYI+Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>4825</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\spiral.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\stack.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/stack.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3nstigog4q</Fingerprint>
+      <Integrity>wbfJw1tVEznGoRRmZv+67pYptjd6PtxegTP3QS3+IhM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>2857</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\stack.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\tear.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/tear.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i2yvwnw72w</Fingerprint>
+      <Integrity>xqUYxsuXaxaIP8sHEEwwnryyLJxum7OIABXMrcn4KPs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>7542</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\tear.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\typewriter.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/typewriter.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>twnibp39mk</Fingerprint>
+      <Integrity>jah0tMzGezJMF3j/N5rn0unWWwyBzOeAmws9ecaIIQU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>7279</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\typewriter.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\velvet.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/velvet.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pfqbimuizj</Fingerprint>
+      <Integrity>a9ucxXHf886o744uQjnmnE9K64PKlBEG6cYNjwyQ5gs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>6349</FileLength>
+      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\velvet.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\wipe.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ZakBlazorTransition</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ZakBlazorTransition</BasePath>
+      <RelativePath>js/zakbt/transitions/wipe.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6d996hcs9x</Fingerprint>
+      <Integrity>Vv7pHTQrsp/j2FheqZ+tuZ/4fm0liXPGCKunQI+L6XY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>1800</FileLength>
+      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\wipe.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,276 @@
+@page "/docs"
+@inject IJSRuntime JS
+
+<PageTitle>Docs — ZakBlazorTransition</PageTitle>
+
+<section class="detail-head" data-entrance="">
+    <p class="detail-group">Docs</p>
+    <h1 class="detail-title">Documentation</h1>
+    <p class="detail-talk">Everything you wire up to run page transitions on real Blazor navigation.</p>
+</section>
+
+<nav class="docs-toc" aria-label="On this page" data-entrance="">
+    <button type="button" @onclick='() => ScrollToAsync("install")'>Install</button>
+    <button type="button" @onclick='() => ScrollToAsync("configure")'>Register &amp; configure</button>
+    <button type="button" @onclick='() => ScrollToAsync("mount")'>Mount the host</button>
+    <button type="button" @onclick='() => ScrollToAsync("trigger")'>Trigger a transition</button>
+    <button type="button" @onclick='() => ScrollToAsync("catalog")'>The catalog</button>
+    <button type="button" @onclick='() => ScrollToAsync("custom")'>Add your own</button>
+    <button type="button" @onclick='() => ScrollToAsync("service")'>Control from code</button>
+    <button type="button" @onclick='() => ScrollToAsync("motion")'>Motion &amp; a11y</button>
+</nav>
+
+<section class="gs-body" data-entrance="">
+    <p class="gs-lead">
+        ZakBlazorTransition plays page transitions <em>during</em> real Blazor route
+        navigation: the engine covers the screen, the router swaps the page underneath,
+        and the same animation reveals the destination. Back and forward replay what you
+        actually watched, in reverse. This is the full reference — every snippet below has
+        a copy button.
+    </p>
+
+    <h2 class="gs-subtitle" id="install">1. Install</h2>
+    <p class="gs-lead">Add the NuGet package to your app (Server, WebAssembly, or the Client project of a prerendered app):</p>
+    <CodeBlock Language="powershell" Code="@InstallCode" />
+    <p class="detail-hint">
+        This also brings in <code>ZakBlazorTransition.Core</code> (options, catalog,
+        contracts). The package ships the Razor components, the JS engine, and the
+        already-vendored GSAP and three.js as static web assets — <strong>no Node
+        required</strong>. Working inside this repo instead? Reference
+        <code>src\ZakBlazorTransition\ZakBlazorTransition.csproj</code> directly.
+    </p>
+
+    <h2 class="gs-subtitle" id="configure">2. Register &amp; configure</h2>
+    <p class="gs-lead">Call <code>AddZakBT</code> in <code>Program.cs</code>:</p>
+    <CodeBlock Language="csharp" Code="@RegisterCode" />
+    <p class="detail-hint">
+        With prerendering, call it in <strong>both</strong> the server
+        <code>Program.cs</code> and the <code>*.Client/Program.cs</code>, with the same
+        options — the first paint is planned server-side. Unknown transition names and
+        non-positive timeouts throw at startup, not in the browser.
+    </p>
+    <table class="gs-table">
+        <thead>
+            <tr><th>Option</th><th>Default</th><th>What it does</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>DefaultTransition</td><td>peel</td><td>Plays when a link names none; <code>none</code> swaps instantly.</td></tr>
+            <tr><td>MinCoverTimeMs</td><td>0</td><td>Holds the cover at least this long after the route swaps.</td></tr>
+            <tr><td>RevealOnLoad</td><td>off</td><td>Preloader: covers the first load, reveals it with a named transition.</td></tr>
+            <tr><td>ReducedMotion</td><td>None</td><td>For reduced-motion visitors: instant swap (<code>None</code>) or cross-fade (<code>Fade</code>).</td></tr>
+            <tr><td>MediaTimeoutMs</td><td>1500</td><td>Cap on waiting for above-the-fold media before revealing.</td></tr>
+            <tr><td>RenderTimeoutMs</td><td>4000</td><td>Cap on waiting for the destination to render.</td></tr>
+            <tr><td>EntranceEnabled</td><td>true</td><td>Run <code>data-entrance</code> content animations on reveal.</td></tr>
+            <tr><td>CoverColor</td><td>#111111</td><td>Painted before a transition draws its own cover.</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="gs-subtitle" id="mount">3. Mount the host</h2>
+    <p class="gs-lead">One host, above the router, in <code>Routes.razor</code>:</p>
+    <CodeBlock Language="razor" Code="@HostCode" />
+    <p class="gs-lead">And the engine's stylesheet in <code>App.razor</code>, before your own CSS:</p>
+    <CodeBlock Language="html" Code="@CssCode" />
+    <p class="detail-hint">
+        The host renders a fixed layer (<code>data-zakbt</code>, always
+        <code>aria-hidden</code>) and intercepts navigation through
+        <code>RegisterLocationChangingHandler</code> — your pages never coordinate with it.
+    </p>
+
+    <h2 class="gs-subtitle" id="trigger">4. Trigger a transition</h2>
+    <p class="gs-lead">Name a transition on any link — that's the entire page-level API:</p>
+    <CodeBlock Language="razor" Code="@TriggerCode" />
+    <p class="detail-hint">
+        Hovering or focusing a link starts downloading its transition module. A link
+        without <code>data-transition</code> plays <code>DefaultTransition</code>, and
+        <code>none</code> swaps instantly. Optional polish: put <code>data-entrance</code>
+        on elements for the reveal-time entrance, and key your page look to
+        <code>body[data-ground]</code> so departing pages keep their colour inside the
+        transition's old-page copies.
+    </p>
+
+    <h2 class="gs-subtitle" id="catalog">5. The catalog</h2>
+    <p class="gs-lead">Twenty-one effects ship wired and ready. Every name below plays itself:</p>
+    @foreach (var group in Groups)
+    {
+        <h3 class="docs-catalog__label">@GroupLabel(group)</h3>
+        <ul class="docs-catalog" role="list">
+            @foreach (var t in TransitionCatalog.InGroup(group))
+            {
+                <li>
+                    <a href="/transition/@t.Name" data-transition="@t.Name">@t.Name</a>
+                    <span>@DemoCatalog.Talk(t.Name)</span>
+                </li>
+            }
+        </ul>
+    }
+
+    <h2 class="gs-subtitle" id="custom">6. Add your own transition</h2>
+    <p class="gs-lead">
+        There is no drop-in registration yet: a new effect is added to the library
+        itself (fork or vendor its source), in two places. First the JS module, whose
+        file name must match its <code>name</code>:
+    </p>
+    <CodeBlock Language="javascript" Code="@CustomJsCode" />
+    <p class="gs-lead">
+        Then register it in the library's <code>registry.js</code> <code>loaders</code>
+        map, and add a <code>TransitionNames</code> constant and a
+        <code>TransitionCatalog.All</code> row on the .NET side:
+    </p>
+    <CodeBlock Language="csharp" Code="@CustomNetCode" />
+    <p class="detail-hint">
+        Once it is in the catalog and loaders map, link it with
+        <code>data-transition="my-effect"</code> and the engine preloads, resolves reduced
+        motion and records it in history like any built-in.
+    </p>
+
+    <h2 class="gs-subtitle" id="service">7. Control from code</h2>
+    <p class="gs-lead">
+        Inject <code>ITransitionService</code> to read the engine, and signal from a page
+        when its content is on screen:
+    </p>
+    <CodeBlock Language="razor" Code="@ServiceCode" />
+    <p class="detail-hint">
+        <code>Phase</code> moves through <code>Idle → Leaving → Covered → Entering</code>;
+        <code>IsTransitioning</code> is true while a page is covered or being covered or
+        revealed; <code>PhaseChanged</code> fires on the renderer's thread. The engine also
+        has a JS-side render wait with <code>RenderTimeoutMs</code> as a backstop, so
+        <code>NotifyPageRendered()</code> is a hint, not a requirement.
+    </p>
+
+    <h2 class="gs-subtitle" id="motion">8. Reduced motion, accessibility and history</h2>
+    <p class="gs-lead">
+        three.js is loaded <em>only</em> when a WebGL transition is first requested; the
+        renderer takes WebGPU → WebGL2 → a GSAP cross-fade automatically. During a
+        transition the page is <code>inert</code>, scrolling is held, and the layer is
+        <code>aria-hidden</code>; afterwards focus lands on <code>&lt;main&gt;</code>.
+        Visitors who prefer reduced motion get <code>ReducedMotion</code> (instant swap or
+        cross-fade). History entries remember which transition each page arrived with and
+        left by, so back and forward replay the effect that actually played, mirrored.
+    </p>
+
+    <p class="gs-close">
+        Ready to see it? Browse the <a href="/" data-transition="curtain">index</a> — every
+        row plays itself.
+    </p>
+</section>
+
+@code {
+    private static readonly TransitionGroup[] Groups =
+    {
+        TransitionGroup.Overlay,
+        TransitionGroup.PageComposition,
+        TransitionGroup.WebGl,
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // The docs are paper-white.
+            await JS.InvokeVoidAsync("zakbtDemo.setGround", Grounds.White);
+        }
+    }
+
+    // In-page jump via JS scroll, not a #fragment link: a hash change would fire the
+    // router's LocationChanged and make the engine scroll back to the top and replay
+    // the entrance. This keeps the TOC from disturbing the transition host.
+    private Task ScrollToAsync(string id) => JS.InvokeVoidAsync("zakbtDemo.scrollToId", id).AsTask();
+
+    private static string GroupLabel(TransitionGroup group) => group switch
+    {
+        TransitionGroup.Overlay => "Overlay",
+        TransitionGroup.PageComposition => "Page composition",
+        TransitionGroup.WebGl => "WebGL",
+        _ => group.ToString(),
+    };
+
+    private const string InstallCode = "dotnet add package ZakBlazorTransition";
+
+    private const string RegisterCode = """
+builder.Services.AddZakBT(options =>
+{
+    options.DefaultTransition = TransitionNames.Wipe;
+    options.ReducedMotion = ReducedMotionMode.Fade;
+    options.RevealOnLoad = new RevealOnLoadOptions
+    {
+        Transition = TransitionNames.Curtain,
+        MinCoverTimeMs = 700,
+    };
+});
+""";
+
+    private const string HostCode = """
+@* Routes.razor — one host, above the router. *@
+<TransitionHost />
+
+<Router AppAssembly="typeof(Program).Assembly"> ... </Router>
+""";
+
+    private const string CssCode = """
+@* App.razor (head) — the engine's stylesheet, before your own CSS. *@
+<link rel="stylesheet" href="/_content/ZakBlazorTransition/css/zakbt.css" />
+""";
+
+    private const string TriggerCode = """
+<a href="/about" data-transition="circle">About</a>
+
+@* or let the library components mark the link: *@
+<TransitionLink Href="/about" Transition="circle">About</TransitionLink>
+
+@* or the grouped index of all twenty-one (links to /transition/{name} by default): *@
+<TransitionIndex />
+""";
+
+    private const string CustomJsCode = """
+// src/ZakBlazorTransition/wwwroot/js/zakbt/transitions/my-effect.js
+// The file name must match the transition's `name`.
+import { defineTransition } from '../lib/registry.js';
+
+export default defineTransition({
+  name: 'my-effect',
+  leave(context) { /* cover the screen; return a GSAP timeline */ },
+  enter(context) { /* reveal the new page */ },
+});
+
+// …and add it to the loaders map in wwwroot/js/zakbt/lib/registry.js:
+//   'my-effect': () => import('../transitions/my-effect.js'),
+""";
+
+    private const string CustomNetCode = """
+// 1. A name, in TransitionNames (ZakBlazorTransition.Core.Transitions)
+public const string MyEffect = "my-effect";
+
+// 2. A descriptor row in TransitionCatalog.All — group, entrance, WebGL flag.
+new() { Name = TransitionNames.MyEffect, Group = TransitionGroup.Overlay, Order = 22 },
+""";
+
+    private const string ServiceCode = """
+@inject ITransitionService Transitions
+@implements IDisposable
+
+@if (Transitions.IsTransitioning)
+{
+    <div class="busy">Navigating…</div>
+}
+
+@code {
+    // ITransitionService is a singleton, so always unsubscribe on dispose.
+    protected override void OnInitialized() => Transitions.PhaseChanged += OnPhaseChanged;
+
+    public void Dispose() => Transitions.PhaseChanged -= OnPhaseChanged;
+
+    private void OnPhaseChanged(object? sender, TransitionPhaseChangedEventArgs e)
+    {
+        // e.Phase: Idle | Leaving | Covered | Entering — marshal back to this renderer.
+        InvokeAsync(StateHasChanged);
+    }
+
+    // After the destination content is on screen, let the engine reveal it:
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        Transitions.NotifyPageRendered();
+        return Task.CompletedTask;
+    }
+}
+""";
+}

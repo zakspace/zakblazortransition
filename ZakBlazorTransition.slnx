@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ZakBlazorTransition.Core/ZakBlazorTransition.Core.csproj" />
+    <Project Path="src/ZakBlazorTransition.Demo.Client/ZakBlazorTransition.Demo.Client.csproj" />
+    <Project Path="src/ZakBlazorTransition.Demo/ZakBlazorTransition.Demo.csproj" />
+    <Project Path="src/ZakBlazorTransition/ZakBlazorTransition.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ZakBlazorTransition.Core.Tests/ZakBlazorTransition.Core.Tests.csproj" />
+    <Project Path="tests/ZakBlazorTransition.PlaywrightTests/ZakBlazorTransition.PlaywrightTests.csproj" />
+  </Folder>
+</Solution>

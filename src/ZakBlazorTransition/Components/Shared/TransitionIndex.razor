@@ -1,0 +1,71 @@
+@* Lists the transitions the engine ships with, grouped, linking each to a page that plays it. *@
+@namespace ZakBlazorTransition.Components
+@using ZakBlazorTransition.Core.Transitions
+
+<nav class="zakbt-index index" aria-label="Page transitions">
+    @foreach (var group in Groups)
+    {
+        <section class="zakbt-index__group">
+            <h2 class="zakbt-index__label">@Label(group)</h2>
+            <ul class="zakbt-index__list" role="list" data-entrance="@(Entrance ? "" : null)">
+                @foreach (var transition in TransitionCatalog.InGroup(group))
+                {
+                    <li class="zakbt-index__item" data-entrance="@(Entrance ? "" : null)">
+                        <a class="zakbt-index__link"
+                           href="@Href(transition)"
+                           data-transition="@transition.Name">
+                            <span class="zakbt-index__name" aria-hidden="true">@Num(transition)</span>
+                            <span class="zakbt-index__link-name">@transition.Name</span>
+                            @if (Caption is not null)
+                            {
+                                <span class="zakbt-index__caption">@Caption(transition)</span>
+                            }
+                        </a>
+                    </li>
+                }
+            </ul>
+        </section>
+    }
+</nav>
+
+@code {
+    private static readonly TransitionGroup[] Groups =
+    [
+        TransitionGroup.Overlay,
+        TransitionGroup.PageComposition,
+        TransitionGroup.WebGl,
+    ];
+
+    /// <summary>Where each transition's page lives. Defaults to <c>/transition/{name}</c>.</summary>
+    [Parameter]
+    public Func<IPageTransition, string>? HrefTemplate { get; set; }
+
+    /// <summary>What to call each group. Defaults to a readable name.</summary>
+    [Parameter]
+    public Func<TransitionGroup, string>? GroupLabel { get; set; }
+
+    /// <summary>Mark the items so the page's entrance brings them in as they scroll into view.</summary>
+    [Parameter]
+    public bool Entrance { get; set; } = true;
+
+    /// <summary>A line about each transition, shown beside its name. Null lists names only.</summary>
+    [Parameter]
+    public Func<IPageTransition, string>? Caption { get; set; }
+
+    private static string Num(IPageTransition transition) =>
+        transition is TransitionDescriptor { Order: var order }
+            ? (order < 10 ? $"0{order}" : order.ToString())
+            : string.Empty;
+
+    private string Href(IPageTransition transition) =>
+        HrefTemplate?.Invoke(transition) ?? $"/transition/{transition.Name}";
+
+    private string Label(TransitionGroup group) =>
+        GroupLabel?.Invoke(group) ?? group switch
+        {
+            TransitionGroup.Overlay => "Overlay",
+            TransitionGroup.PageComposition => "Page composition",
+            TransitionGroup.WebGl => "WebGL",
+            _ => group.ToString(),
+        };
+}

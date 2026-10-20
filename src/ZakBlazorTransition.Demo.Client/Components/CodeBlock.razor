@@ -1,0 +1,92 @@
+@inject IJSRuntime JS
+@implements IDisposable
+
+<div class="code-block">
+    <div class="code-block__bar">
+        @if (!string.IsNullOrEmpty(Language))
+        {
+            <span class="code-block__lang">@Language</span>
+        }
+        <button type="button" class="code-block__copy @(_copied ? "is-copied" : null)" @onclick="CopyAsync">
+            @(_copied ? "Copied" : "Copy")
+        </button>
+    </div>
+    <pre><code>@Code</code></pre>
+    <span class="code-block__status" role="status" aria-live="polite">
+        @(_copied ? "Copied to clipboard" : "")
+    </span>
+</div>
+
+@code {
+    /// <summary>The literal snippet to show and copy (Blazor HTML-encodes it for display).</summary>
+    [Parameter, EditorRequired]
+    public string Code { get; set; } = "";
+
+    /// <summary>Optional short label shown on the bar (e.g. "csharp", "razor", "powershell").</summary>
+    [Parameter]
+    public string Language { get; set; } = "";
+
+    private bool _copied;
+    private bool _disposed;
+    private CancellationTokenSource? _resetCts;
+
+    private async Task CopyAsync()
+    {
+        bool ok;
+        try
+        {
+            ok = await JS.InvokeAsync<bool>("zakbtDemo.copyText", Code);
+        }
+        catch (JSException)
+        {
+            // demo.js not on the page (or clipboard blocked): fail quietly.
+            return;
+        }
+        catch (InvalidOperationException)
+        {
+            // JS interop unavailable (e.g. during prerender).
+            return;
+        }
+
+        if (_disposed || !ok)
+        {
+            return;
+        }
+
+        _copied = true;
+        StateHasChanged();
+
+        _resetCts?.Cancel();
+        _resetCts?.Dispose();
+        _resetCts = new CancellationTokenSource();
+        _ = ResetAsync(_resetCts.Token);
+    }
+
+    private async Task ResetAsync(CancellationToken token)
+    {
+        try
+        {
+            await Task.Delay(1500, token);
+        }
+        catch (TaskCanceledException)
+        {
+            return;
+        }
+
+        if (_disposed || token.IsCancellationRequested)
+        {
+            return;
+        }
+
+        _copied = false;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        _disposed = true;
+        _resetCts?.Cancel();
+        _resetCts?.Dispose();
+        _resetCts = null;
+    }
+}

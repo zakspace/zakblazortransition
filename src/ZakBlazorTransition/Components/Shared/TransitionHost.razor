@@ -1,0 +1,327 @@
+@* The engine's host: renders the transition layer and drives every navigation. *@
+@namespace ZakBlazorTransition.Components
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.Extensions.Logging
+@using Microsoft.JSInterop
+@implements IAsyncDisposable
+@inject TransitionRuntime Runtime
+@inject TransitionService Service
+@inject TransitionOptions Options
+@inject NavigationManager Navigation
+@inject ILogger<TransitionHost> Logger
+
+<div class="zakbt"
+     data-zakbt
+     data-state="@_initialState"
+     data-cover="@_initialCover"
+     data-transition="@_initialTransition"
+     aria-hidden="true"
+     @ref="_layer"></div>
+
+@code {
+    // Filled by the @ref binding below; the analyzer can't see that.
+#pragma warning disable CS0649
+    private ElementReference _layer;
+#pragma warning restore CS0649
+    private string? _initialState;
+    private string? _initialCover;
+    private string? _initialTransition;
+    private IDisposable? _locationChanging;
+    private bool _started;
+    private int _sequence;
+    private bool _pendingTraverse;
+    private string? _pendingRequested;
+    private long? _pendingScroll;
+
+    /// <summary>
+    /// The first page is rendered covered, so <c>revealOnLoad</c> can uncover it,
+    /// and the layer names the transition that will, so CSS can paint the cover.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        if (Options.RevealOnLoad is { } reveal)
+        {
+            _initialState = "covered";
+            _initialCover = "solid";
+            _initialTransition = reveal.Transition ?? Options.DefaultTransition;
+        }
+    }
+
+    /// <summary>
+    /// The layer belongs to the JavaScript engine once it has started: further
+    /// renders would fight it over <c>data-state</c>, so the component stops.
+    /// </summary>
+    protected override bool ShouldRender() => !_started;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender || _started)
+        {
+            return;
+        }
+
+        try
+        {
+            await Runtime.ConfigureAsync(Options);
+            await Runtime.InitAsync(_layer);
+        }
+        catch (Exception ex)
+        {
+            // Without the browser half nothing can animate: uncover the page as it
+            // was rendered, and let navigation carry on plainly, without transitions.
+            Logger.LogError(ex, "The ZakBlazorTransition engine could not start; navigating without transitions.");
+            (_initialState, _initialCover, _initialTransition) = (null, null, null);
+            StateHasChanged();
+            return;
+        }
+
+        _started = true;
+
+        _locationChanging = Navigation.RegisterLocationChangingHandler(OnLocationChanging);
+        Navigation.LocationChanged += OnLocationChanged;
+
+        if (Options.RevealOnLoad is { } reveal)
+        {
+            await RevealFirstPageAsync(reveal);
+        }
+    }
+
+    /// <summary>
+    /// Covers the first page load, then reveals it once the page and the
+    /// transition are ready: a preloader, driven by the same steps as a navigation.
+    /// </summary>
+    private async Task RevealFirstPageAsync(RevealOnLoadOptions reveal)
+    {
+        var name = reveal.Transition ?? Options.DefaultTransition;
+        var here = new Uri(Navigation.Uri);
+        var context = new TransitionContext
+        {
+            Transition = name,
+            From = here,
+            To = here,
+            Initial = true,
+            ReducedMotion = await Runtime.PrefersReducedMotionAsync(),
+        };
+
+        _sequence = Service.BeginNavigation(
+            new NavigationRequest { To = here, From = here, RequestedTransition = name },
+            context);
+        Service.SetPhase(TransitionPhase.Covered, context);
+
+        var result = await Runtime.CoverOnLoadAsync(name);
+        await Runtime.RevealAsync(waitReady: true, minCoverTime: reveal.MinCoverTimeMs);
+        Service.EndNavigation(_sequence);
+    }
+
+    /// <summary>
+    /// Runs before the URL changes: decide what will play and cover the page, so
+    /// the swap happens under the cover. A newer navigation cancels this one.
+    /// </summary>
+    private async ValueTask OnLocationChanging(LocationChangingContext ctx)
+    {
+        try
+        {
+            var from = new Uri(Navigation.Uri);
+            var to = Navigation.ToAbsoluteUri(ctx.TargetLocation);
+
+            if (IsSamePage(from, to))
+            {
+                if (!string.IsNullOrEmpty(to.Fragment))
+                {
+                    await Runtime.ScrollToHashAsync(to.Fragment);
+                }
+
+                return; // an in-page link: nothing to cover or swap
+            }
+
+            var intent = await Runtime.ConsumeIntentAsync(to.AbsoluteUri);
+            var traverse = intent.Traverse is not null;
+            var direction = traverse
+                ? ParseDirection(intent.Traverse!.Direction)
+                : TransitionDirection.Forward;
+            var requested = (traverse ? intent.Traverse!.Transition : intent.Click?.Transition)
+                ?? Options.DefaultTransition;
+
+            var reduced = await Runtime.PrefersReducedMotionAsync();
+            var name = Pick(requested, reduced);
+            TransitionOrigin? origin = intent.Click?.Origin is { X: var x, Y: var y }
+                ? new TransitionOrigin(x, y)
+                : null;
+
+            var context = new TransitionContext
+            {
+                Transition = name,
+                From = from,
+                To = to,
+                Direction = direction,
+                Origin = origin,
+                ReducedMotion = reduced,
+                Initial = false,
+            };
+            var request = new NavigationRequest
+            {
+                To = to,
+                From = from,
+                RequestedTransition = requested,
+                Direction = direction,
+                IsTraverse = traverse,
+                Origin = origin,
+            };
+
+            var sequence = Service.BeginNavigation(request, context);
+            Service.SetPhase(TransitionPhase.Leaving, context);
+
+            _pendingTraverse = traverse;
+            _pendingRequested = traverse ? null : requested;
+            _pendingScroll = traverse ? (long)intent.Traverse!.Scroll : null;
+            _sequence = sequence;
+
+            if (name == TransitionNames.None)
+            {
+                return; // an instant swap: LocationChanged finishes it
+            }
+
+            if (!traverse)
+            {
+                await Runtime.RememberLeaveAsync(requested);
+            }
+
+            await Runtime.BeginNavigationAsync(new NavigationRequestInfo
+            {
+                From = from.AbsoluteUri,
+                To = to.AbsoluteUri,
+                Direction = direction == TransitionDirection.Back ? "back" : "forward",
+                Transition = name,
+                Origin = origin is { } o ? new OriginInfo { X = o.X, Y = o.Y } : null,
+                Traverse = traverse,
+            });
+
+            if (!Service.IsCurrent(sequence) || ctx.CancellationToken.IsCancellationRequested)
+            {
+                return; // a newer navigation took over while the cover played
+            }
+
+            Service.SetPhase(TransitionPhase.Covered, context);
+        }
+        catch (Exception)
+        {
+            // A transition that fails must not stop the navigation: the page swaps
+            // and is revealed without one.
+            Service.EndNavigation(_sequence);
+        }
+    }
+
+    /// <summary>
+    /// The URL has changed: the destination is in the DOM. Set it up, wait for
+    /// it to render, then reveal it.
+    /// </summary>
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        var sequence = _sequence;
+        if (sequence == 0 || !Service.IsCurrent(sequence))
+        {
+            return;
+        }
+
+        _ = AfterNavigationAsync(sequence);
+    }
+
+    private async Task AfterNavigationAsync(int sequence)
+    {
+        var traverse = _pendingTraverse;
+        try
+        {
+            await Runtime.RecordNavigationAsync();
+            if (!traverse)
+            {
+                await Runtime.RememberArriveAsync(_pendingRequested);
+            }
+
+            if (!Service.IsCurrent(sequence))
+            {
+                return;
+            }
+
+            await Runtime.PrepareAsync(_pendingScroll);
+            if (!Service.IsCurrent(sequence))
+            {
+                return;
+            }
+
+            if (Service.CurrentContext?.Transition is null or TransitionNames.None)
+            {
+                await Runtime.AppearAsync(new NavigationRequestInfo
+                {
+                    From = Service.CurrentRequest?.From.AbsoluteUri ?? Navigation.Uri,
+                    To = Service.CurrentRequest?.To.AbsoluteUri ?? Navigation.Uri,
+                    Direction = Service.CurrentRequest?.Direction == TransitionDirection.Back ? "back" : "forward",
+                    Transition = TransitionNames.None,
+                    Traverse = traverse,
+                });
+            }
+            else
+            {
+                await Runtime.RevealAsync();
+            }
+        }
+        catch (Exception)
+        {
+            // Never leave the page covered: whatever failed, the reveal already
+            // logged it, and the next navigation starts from a clean layer.
+        }
+        finally
+        {
+            if (Service.IsCurrent(sequence))
+            {
+                Service.EndNavigation(sequence);
+            }
+        }
+    }
+
+    /// <summary>What actually plays: reduced motion overrides what was asked for.</summary>
+    private string Pick(string requested, bool reducedMotion)
+    {
+        if (!reducedMotion)
+        {
+            return requested;
+        }
+
+        return Options.ReducedMotion == ReducedMotionMode.Fade && Service.Transitions.Has(TransitionNames.Fade)
+            ? TransitionNames.Fade
+            : TransitionNames.None;
+    }
+
+    private static TransitionDirection ParseDirection(string? direction) =>
+        string.Equals(direction, "back", StringComparison.OrdinalIgnoreCase)
+            ? TransitionDirection.Back
+            : TransitionDirection.Forward;
+
+    /// <summary>Two URIs of the same page: same path and query, whatever the fragment.</summary>
+    private static bool IsSamePage(Uri from, Uri to) =>
+        string.Equals(from.GetLeftPart(UriPartial.Path), to.GetLeftPart(UriPartial.Path), StringComparison.OrdinalIgnoreCase)
+        && string.Equals(from.Query, to.Query, StringComparison.Ordinal);
+
+    public async ValueTask DisposeAsync()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+        _locationChanging?.Dispose();
+        _locationChanging = null;
+
+        if (_started)
+        {
+            try
+            {
+                await Runtime.DestroyAsync();
+            }
+            catch (JSDisconnectedException)
+            {
+                // The page is going away: the engine goes with it.
+            }
+        }
+
+        if (Runtime is IAsyncDisposable disposable)
+        {
+            await disposable.DisposeAsync();
+        }
+    }
+}

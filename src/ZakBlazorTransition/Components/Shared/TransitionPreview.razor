@@ -1,0 +1,91 @@
+@* A page section that plays one transition: its name, what it is, and links that lead somewhere with it. *@
+@namespace ZakBlazorTransition.Components
+@using ZakBlazorTransition.Core.Transitions
+
+<article class="zakbt-preview wrap">
+    <header class="zakbt-preview__head">
+        <p class="zakbt-preview__kicker" data-entrance>
+            @Number(_descriptor) <span>(@GroupLabel)</span>
+        </p>
+        <h1 class="zakbt-preview__title" data-entrance="lines">@_descriptor.Name</h1>
+    </header>
+
+    @if (Summary is not null)
+    {
+        <p class="lead zakbt-preview__summary" data-entrance>@Summary</p>
+    }
+
+    @ChildContent
+
+    <nav class="zakbt-preview__pager" aria-label="Other transitions">
+        @if (Sibling(-1) is { } previous)
+        {
+            <a href="@Href(previous)" data-transition="@previous.Name" rel="prev">
+                <span class="eyebrow">Previous</span>
+                <span class="zakbt-preview__name">
+                    @previous.Name
+                    <span class="zakbt-preview__number" aria-hidden="true">@Number(previous)</span>
+                </span>
+            </a>
+        }
+        @if (Sibling(1) is { } next)
+        {
+            <a href="@Href(next)" data-transition="@next.Name" rel="next">
+                <span class="eyebrow">Next</span>
+                <span class="zakbt-preview__name">
+                    @next.Name
+                    <span class="zakbt-preview__number" aria-hidden="true">@Number(next)</span>
+                </span>
+            </a>
+        }
+    </nav>
+</article>
+
+@code {
+    private int _index;
+    private TransitionDescriptor _descriptor = default!;
+
+    /// <summary>The transition this page is about, by name.</summary>
+    [Parameter, EditorRequired]
+    public string Transition { get; set; } = default!;
+
+    /// <summary>One line about the transition, over its facts.</summary>
+    [Parameter]
+    public string? Summary { get; set; }
+
+    /// <summary>Where the previous and next links go. Defaults to <c>/transition/{name}</c>.</summary>
+    [Parameter]
+    public Func<IPageTransition, string>? HrefTemplate { get; set; }
+
+    /// <summary>Anything else the page shows between the summary and the pager.</summary>
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        _descriptor = TransitionCatalog.Find(Transition)
+            ?? throw new ArgumentException($"No transition named \"{Transition}\".", nameof(Transition));
+        _index = TransitionCatalog.All.ToList().IndexOf(_descriptor);
+    }
+
+    private IPageTransition? Sibling(int offset)
+    {
+        var count = TransitionCatalog.All.Count;
+        var index = (_index + offset + count) % count;
+        return TransitionCatalog.All[index];
+    }
+
+    private string Href(IPageTransition transition) =>
+        HrefTemplate?.Invoke(transition) ?? $"/transition/{transition.Name}";
+
+    private string Number(IPageTransition transition) =>
+        (TransitionCatalog.All.ToList().IndexOf((TransitionDescriptor)transition) + 1).ToString("00");
+
+    private string GroupLabel => _descriptor.Group switch
+    {
+        TransitionGroup.Overlay => "overlay",
+        TransitionGroup.PageComposition => "page composition",
+        TransitionGroup.WebGl => "WebGL",
+        _ => _descriptor.Group.ToString().ToLowerInvariant(),
+    };
+}

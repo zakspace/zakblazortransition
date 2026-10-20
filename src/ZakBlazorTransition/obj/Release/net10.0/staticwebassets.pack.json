@@ -1,0 +1,189 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\css\\zakbt.css",
+      "PackagePath": "staticwebassets\\css\\zakbt.css"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\gsap\\CSSPlugin.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\gsap\\CSSPlugin.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\gsap\\SplitText.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\gsap\\SplitText.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\gsap\\gsap-core.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\gsap\\gsap-core.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\gsap\\index.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\gsap\\index.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\three.core.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\three.core.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\three.module.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\three.module.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\three.tsl.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\three.tsl.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\vendor\\three.webgpu.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\three.webgpu.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\config.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\config.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\index.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\index.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\entrance.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\entrance.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\entry-memory.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\entry-memory.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\helpers.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\helpers.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\media.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\media.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\meta.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\meta.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\old-page.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\old-page.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\registry.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\registry.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\lib\\webgl.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\lib\\webgl.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\carousel.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\carousel.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\channel.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\channel.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\circle.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\circle.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\columns.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\columns.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\corner.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\corner.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\cube.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\cube.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\curtain.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\curtain.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\dissolve.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\dissolve.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\dither.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\dither.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\fade.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\fade.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\frame.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\frame.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\ink.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\ink.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\particles.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\particles.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\peel.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\peel.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\slices.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\slices.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\slide-over.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\slide-over.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\spiral.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\spiral.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\stack.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\stack.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\tear.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\tear.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\typewriter.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\typewriter.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\velvet.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\velvet.js"
+    },
+    {
+      "Id": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\wwwroot\\js\\zakbt\\transitions\\wipe.js",
+      "PackagePath": "staticwebassets\\js\\zakbt\\transitions\\wipe.js"
+    },
+    {
+      "Id": "obj\\Release\\net10.0\\staticwebassets\\msbuild.ZakBlazorTransition.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net10.0\\staticwebassets\\msbuild.ZakBlazorTransition.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net10.0\\staticwebassets\\msbuild.build.ZakBlazorTransition.props",
+      "PackagePath": "build\\ZakBlazorTransition.props"
+    },
+    {
+      "Id": "obj\\Release\\net10.0\\staticwebassets\\msbuild.buildMultiTargeting.ZakBlazorTransition.props",
+      "PackagePath": "buildMultiTargeting\\ZakBlazorTransition.props"
+    },
+    {
+      "Id": "obj\\Release\\net10.0\\staticwebassets\\msbuild.buildTransitive.ZakBlazorTransition.props",
+      "PackagePath": "buildTransitive\\ZakBlazorTransition.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
