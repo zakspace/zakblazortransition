@@ -20,3 +20,14 @@ D:\Source\Experiment\Zak\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\De
 D:\Source\Experiment\Zak\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\refint\ZakBlazorTransition.Core.dll
 D:\Source\Experiment\Zak\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.pdb
 D:\Source\Experiment\Zak\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ref\ZakBlazorTransition.Core.dll
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\bin\Debug\net10.0\ZakBlazorTransition.Core.deps.json
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\bin\Debug\net10.0\ZakBlazorTransition.Core.dll
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\bin\Debug\net10.0\ZakBlazorTransition.Core.pdb
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.AssemblyInfoInputs.cache
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.AssemblyInfo.cs
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.csproj.CoreCompileInputs.cache
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.dll
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\refint\ZakBlazorTransition.Core.dll
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ZakBlazorTransition.Core.pdb
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\src\ZakBlazorTransition.Core\obj\Debug\net10.0\ref\ZakBlazorTransition.Core.dll

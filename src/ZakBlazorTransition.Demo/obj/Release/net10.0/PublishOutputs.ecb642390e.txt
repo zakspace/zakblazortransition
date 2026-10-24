@@ -1,0 +1,5 @@
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\output\appsettings.Development.json
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\output\appsettings.json
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\output\ZakBlazorTransition.Demo.runtimeconfig.json
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\output\dotnet.js
+D:\Source\Experiment\Zak\ZakBlazorTransition\ZakBlazorTransition\output\web.config

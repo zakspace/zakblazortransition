@@ -618,8 +618,12 @@ function clear() {
  */
 function lock() {
   for (const type of SCROLL_EVENTS) window.addEventListener(type, holdScroll, { passive: false });
-  for (const el of document.body.children) {
-    if (el === root || el.contains(root) || el.hasAttribute('inert')) continue;
+  // Inert the page's blocks — the layer's siblings in the container it was
+  // rendered into (<body> for a Blazor Web App, the app root for standalone
+  // WebAssembly). Never the layer itself, which is where the transition draws.
+  const container = root?.parentElement || document.body;
+  for (const el of container.children) {
+    if (el === root || el.hasAttribute('inert')) continue;
     el.setAttribute('inert', '');
     locked.add(el);
   }

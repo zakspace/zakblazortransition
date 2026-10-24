@@ -17,7 +17,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4440</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\zakbt.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\CSSPlugin.js'))">
@@ -37,7 +37,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>65156</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:53 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\CSSPlugin.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\gsap-core.js'))">
@@ -57,7 +57,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>171676</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\gsap-core.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\index.js'))">
@@ -77,7 +77,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>664</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\index.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\SplitText.js'))">
@@ -97,7 +97,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>17263</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:54 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\gsap\SplitText.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.core.js'))">
@@ -117,7 +117,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1458113</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.core.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.module.js'))">
@@ -137,7 +137,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>662772</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.module.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.tsl.js'))">
@@ -157,7 +157,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>36859</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:30:51 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.tsl.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.webgpu.js'))">
@@ -177,7 +177,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2284850</FileLength>
-      <LastWriteTime>Sun, 18 Oct 2026 08:04:59 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\vendor\three.webgpu.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\config.js'))">
@@ -197,7 +197,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>453</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\config.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\index.js'))">
@@ -212,12 +212,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a7jb1aqw6s</Fingerprint>
-      <Integrity>CiHOUGv3Ul3zAZZa15wlBZKENxJrLu0HcgcQyt7R3Sc=</Integrity>
+      <Fingerprint>rbt0aae508</Fingerprint>
+      <Integrity>d2ZFEJeLe7BNIIBCvPXVOQHrQ3pWcFa4kafFIXbyS9A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>22485</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:25 GMT</LastWriteTime>
+      <FileLength>22753</FileLength>
+      <LastWriteTime>Wed, 21 Oct 2026 08:32:07 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\index.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entrance.js'))">
@@ -237,7 +237,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>5607</FileLength>
-      <LastWriteTime>Fri, 16 Oct 2026 11:01:32 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entrance.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entry-memory.js'))">
@@ -257,7 +257,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1968</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\entry-memory.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\helpers.js'))">
@@ -277,7 +277,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2336</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\helpers.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\media.js'))">
@@ -297,7 +297,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1621</FileLength>
-      <LastWriteTime>Fri, 16 Oct 2026 11:00:46 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\media.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\meta.js'))">
@@ -317,7 +317,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>333</FileLength>
-      <LastWriteTime>Fri, 16 Oct 2026 11:01:55 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\meta.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\old-page.js'))">
@@ -332,12 +332,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>843zb64p3n</Fingerprint>
-      <Integrity>eMLtB4dVPuGSFvQ7hMtTrWhb3Ny6hlNqdIrIt0m9O+s=</Integrity>
+      <Fingerprint>h5xvg3rup9</Fingerprint>
+      <Integrity>leUvxmRgicVDk2sncFrLVY5p7CYFOUpJV6x3QLRs3Ec=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>8015</FileLength>
-      <LastWriteTime>Fri, 16 Oct 2026 11:01:06 GMT</LastWriteTime>
+      <FileLength>8445</FileLength>
+      <LastWriteTime>Wed, 21 Oct 2026 08:32:07 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\old-page.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\registry.js'))">
@@ -357,7 +357,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>3399</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\registry.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\webgl.js'))">
@@ -377,7 +377,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>8776</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:25 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\lib\webgl.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\carousel.js'))">
@@ -397,7 +397,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>7249</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\carousel.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\channel.js'))">
@@ -417,7 +417,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>6661</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\channel.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\circle.js'))">
@@ -437,7 +437,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1701</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\circle.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\columns.js'))">
@@ -457,7 +457,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1799</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\columns.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\corner.js'))">
@@ -477,7 +477,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4865</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\corner.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\cube.js'))">
@@ -497,7 +497,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>5538</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\cube.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\curtain.js'))">
@@ -517,7 +517,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1968</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\curtain.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dissolve.js'))">
@@ -537,7 +537,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2644</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dissolve.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dither.js'))">
@@ -557,7 +557,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4009</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\dither.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\fade.js'))">
@@ -577,7 +577,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>707</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\fade.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\frame.js'))">
@@ -597,7 +597,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4187</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\frame.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\ink.js'))">
@@ -617,7 +617,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2648</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\ink.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\particles.js'))">
@@ -637,7 +637,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>9496</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\particles.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\peel.js'))">
@@ -657,7 +657,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>6514</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\peel.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slices.js'))">
@@ -677,7 +677,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4911</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slices.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slide-over.js'))">
@@ -697,7 +697,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4119</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\slide-over.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\spiral.js'))">
@@ -717,7 +717,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>4825</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\spiral.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\stack.js'))">
@@ -737,7 +737,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>2857</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\stack.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\tear.js'))">
@@ -757,7 +757,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>7542</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\tear.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\typewriter.js'))">
@@ -777,7 +777,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>7279</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\typewriter.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\velvet.js'))">
@@ -797,7 +797,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>6349</FileLength>
-      <LastWriteTime>Tue, 20 Oct 2026 05:55:40 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\velvet.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\wipe.js'))">
@@ -817,7 +817,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>1800</FileLength>
-      <LastWriteTime>Mon, 19 Oct 2026 13:40:13 GMT</LastWriteTime>
+      <LastWriteTime>Tue, 20 Oct 2026 13:09:23 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\zakbt\transitions\wipe.js'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>

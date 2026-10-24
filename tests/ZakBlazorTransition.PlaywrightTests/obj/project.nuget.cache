@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CVVxMsSs4g8=",
+  "dgSpecHash": "PPYRcSOvMAk=",
   "success": true,
-  "projectFilePath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
+  "projectFilePath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AbdulShaikh\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\AbdulShaikh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

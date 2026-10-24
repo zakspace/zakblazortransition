@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HoqlMFRcy50=",
+  "dgSpecHash": "jcu7tKI4Gds=",
   "success": true,
-  "projectFilePath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
+  "projectFilePath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AbdulShaikh\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\AbdulShaikh\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.13\\microsoft.aspnetcore.authorization.10.0.13.nupkg.sha512",

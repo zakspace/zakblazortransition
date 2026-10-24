@@ -104,12 +104,21 @@ export function keepOldPage(context) {
 export const oldPage = (context) => context.root.querySelector(`[${MARK}]`);
 
 /**
- * The page's blocks: the children of `<body>` (header, main, footer…), not the
+ * The element the host rendered the layer into, which also holds the page's
+ * blocks: `<body>` for a Blazor Web App (server prerender / interactive server),
+ * or the app root (e.g. `#app`) for a standalone WebAssembly host.
+ */
+function pageContainer(context) {
+  return context.root?.parentElement || document.body;
+}
+
+/**
+ * The page's blocks: the layer's siblings (header, main, footer…), not the
  * layer, nor `fixed` ones like a skip link or a loader, which stay put on screen.
  */
 export function pageBlocks(context) {
-  return [...document.body.children].filter((el) => {
-    if (!(el instanceof HTMLElement) || el.contains(context.root)) return false;
+  return [...pageContainer(context).children].filter((el) => {
+    if (!(el instanceof HTMLElement) || el === context.root) return false;
     return getComputedStyle(el).position !== 'fixed';
   });
 }
@@ -125,8 +134,9 @@ export function copyPage(context) {
   for (const { name, value } of document.body.attributes) {
     if (name === 'class' || name.startsWith('data-')) copy.setAttribute(name, value);
   }
-  const body = getComputedStyle(document.body);
-  for (const property of LAYOUT) copy.style.setProperty(property, body.getPropertyValue(property));
+  // The blocks are laid out by the layer's container, so mirror that, not `<body>`.
+  const container = getComputedStyle(pageContainer(context));
+  for (const property of LAYOUT) copy.style.setProperty(property, container.getPropertyValue(property));
   for (const el of pageBlocks(context)) {
     const still = copyNode(el);
     if (still) copy.append(still);

@@ -61,6 +61,15 @@ body {
     transition: background-color 0.4s;
 }
 
+/* A standalone WebAssembly host mounts the app inside #app, so #app carries the
+   page layout the <body> held in a Blazor Web App: header, main and footer are
+   its flex-column children, and <main> grows (see `main.page { flex: 1 }`). */
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a {
     color: inherit;
 }

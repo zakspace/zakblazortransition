@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj": {}
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj",
+        "projectUniqueName": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj",
         "projectName": "ZakBlazorTransition.Core",
-        "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj",
+        "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj",
         "packagesPath": "C:\\Users\\AbdulShaikh\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\obj\\",
+        "outputPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -346,14 +346,14 @@
         }
       }
     },
-    "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj": {
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj",
+        "projectUniqueName": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj",
         "projectName": "ZakBlazorTransition",
-        "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj",
+        "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj",
         "packagesPath": "C:\\Users\\AbdulShaikh\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\obj\\",
+        "outputPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -376,8 +376,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
-                "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj"
+              "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
+                "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj"
               }
             }
           }
@@ -698,14 +698,14 @@
         }
       }
     },
-    "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj": {
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
+        "projectUniqueName": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
         "projectName": "ZakBlazorTransition.Core.Tests",
-        "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
+        "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\ZakBlazorTransition.Core.Tests.csproj",
         "packagesPath": "C:\\Users\\AbdulShaikh\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\obj\\",
+        "outputPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.Core.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -728,11 +728,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
-                "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj"
+              "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj": {
+                "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition.Core\\ZakBlazorTransition.Core.csproj"
               },
-              "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj": {
-                "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj"
+              "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj": {
+                "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\src\\ZakBlazorTransition\\ZakBlazorTransition.csproj"
               }
             }
           }

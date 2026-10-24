@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj": {}
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj": {}
   },
   "projects": {
-    "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj": {
+    "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
+        "projectUniqueName": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
         "projectName": "ZakBlazorTransition.PlaywrightTests",
-        "projectPath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
+        "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
         "packagesPath": "C:\\Users\\AbdulShaikh\\.nuget\\packages\\",
-        "outputPath": "D:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\obj\\",
+        "outputPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

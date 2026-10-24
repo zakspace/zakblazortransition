@@ -1439,11 +1439,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
+      "projectUniqueName": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
       "projectName": "ZakBlazorTransition.PlaywrightTests",
-      "projectPath": "d:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
+      "projectPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\ZakBlazorTransition.PlaywrightTests.csproj",
       "packagesPath": "C:\\Users\\AbdulShaikh\\.nuget\\packages\\",
-      "outputPath": "d:\\Source\\Experiment\\BlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\obj\\",
+      "outputPath": "D:\\Source\\Experiment\\Zak\\ZakBlazorTransition\\ZakBlazorTransition\\tests\\ZakBlazorTransition.PlaywrightTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

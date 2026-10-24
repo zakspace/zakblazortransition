@@ -1,38 +1,20 @@
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using ZakBlazorTransition;
 using ZakBlazorTransition.Demo.Client;
-using ZakBlazorTransition.Demo.Components;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveWebAssemblyComponents();
+// The app's root: the persistent transition layer and the router live under
+// Routes.razor, mounted into <div id="app"> in wwwroot/index.html.
+builder.RootComponents.Add<Routes>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-// The engine's settings on this side too: TransitionHost is prerendered, and the
-// first page is painted covered according to the same options the client runs with.
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+// The engine's settings. With no server prerender in a standalone WebAssembly app,
+// this is the single place the options are configured; RevealOnLoad still covers and
+// reveals the first load, driven entirely on the client.
 builder.Services.AddZakBT(DemoTransitions.Configure);
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseWebAssemblyDebugging();
-}
-else
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
-app.UseHttpsRedirection();
-
-app.UseAntiforgery();
-
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(ZakBlazorTransition.Demo.Client._Imports).Assembly);
-
-app.Run();
+await builder.Build().RunAsync();
