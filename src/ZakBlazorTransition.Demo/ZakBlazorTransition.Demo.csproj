@@ -5,6 +5,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    <PackageId>ZakBlazorTransition</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>zakspace</Authors>
+    <RepositoryUrl>https://github.com/zakspace/zakblazortransition</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <!-- Not a NuGet package: keep `dotnet pack` from emitting a demo package. -->
     <IsPackable>false</IsPackable>
   </PropertyGroup>
